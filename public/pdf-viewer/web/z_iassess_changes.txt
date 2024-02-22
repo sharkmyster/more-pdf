@@ -1,0 +1,17 @@
+viewer.js is inlined into viewer.html so we can substitute <<FILENAME>>
+
+
+
+in viewer js
+
+    if (!this.pdfViewer.currentScaleValue) {
+      this.pdfViewer.currentScaleValue = _ui_utils.DEFAULT_SCALE_VALUE;
+    }
+
+was changed to 
+
+    if (!this.pdfViewer.currentScaleValue) {
+      this.pdfViewer.currentScaleValue = 'page-width';
+    }
+
+This by default sets the page-width to be full width as ACCA want it
